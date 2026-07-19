@@ -7,7 +7,7 @@ Medicube is a healthcare SaaS product with a **separate** Playwright QA dashboar
 ```
 medi/
 ├── frontend/       Medicube healthcare app (port 5173)
-├── qa-dashboard/   Medicube QA results app (port 5174)  ← separate from product
+├── qa-dashboard/   Medicube QA results app (port 5174)  separate from product
 ├── backend/        Shared API (port 3001)
 └── automation/     Playwright + Page Object Model
 ```
@@ -18,7 +18,7 @@ medi/
 | Medicube QA Dashboard | QA / engineers | http://localhost:5174 |
 | API | Both apps | http://localhost:3001 |
 
-The healthcare product sidebar has **no Test Suites** entry. Automation metrics only appear in the QA dashboard.
+Automation metrics only appear in the QA dashboard.
 
 ## Quick Start
 
@@ -47,9 +47,9 @@ npm test
 
 ## CI/CD
 
-See `.github/workflows/ci.yml` — build healthcare + QA dashboard, then run Playwright E2E.
+See `.github/workflows/ci.yml` build healthcare + QA dashboard, then run Playwright E2E.
 
 ## Env vars (automation publish)
 
-- `MEDICUBE_API_URL` — API base (default `http://localhost:3001`)
-- `MEDICUBE_PUBLISH=0` — disable auto-publish to QA dashboard
+- `MEDICUBE_API_URL` API base (default `http://localhost:3001`)
+- `MEDICUBE_PUBLISH=0` disable auto-publish to QA dashboard
