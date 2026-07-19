@@ -1,0 +1,2 @@
+CareSync QA sample clinical document for automated upload testing.
+Patient chart attachment - lab summary.

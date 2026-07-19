@@ -1,0 +1,31 @@
+{
+  "name": "medicube-platform",
+  "version": "1.0.0",
+  "description": "Medicube Healthcare + QA Automation Platform",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix qa-dashboard && npm install --prefix backend && npm install --prefix automation",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:qa": "npm run dev --prefix qa-dashboard",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "npm run build --prefix frontend && npm run build --prefix qa-dashboard && npm run build --prefix backend",
+    "typecheck:backend": "npm run typecheck --prefix backend",
+    "test": "npm run test --prefix automation",
+    "test:ui": "npm run test:ui --prefix automation",
+    "test:report": "npm run report --prefix automation",
+    "publish-results": "npm run publish-results --prefix automation",
+    "ci:build": "npm run typecheck:backend && npm run build --prefix frontend && npm run build --prefix qa-dashboard",
+    "ci:summary": "node automation/scripts/ci-summary.mjs automation/test-results/results.json"
+  },
+  "keywords": [
+    "healthcare",
+    "qa-automation",
+    "playwright",
+    "medicube"
+  ],
+  "author": "Medicube",
+  "license": "MIT"
+}

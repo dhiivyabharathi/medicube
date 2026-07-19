@@ -1,0 +1,23 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+coverage/
+.nyc_output/
